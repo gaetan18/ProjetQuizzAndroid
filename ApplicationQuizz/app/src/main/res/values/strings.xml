@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ApplicationQuizz</string>
+    <string name="title">FistyQuizz</string>
+    <string name="menu1">FastQuizz</string>
+    <string name="menu2">ThemmeQuizz</string>
+    <string name="menu3">Score</string>next
+    <string name="next">Suivant</string>
+</resources>

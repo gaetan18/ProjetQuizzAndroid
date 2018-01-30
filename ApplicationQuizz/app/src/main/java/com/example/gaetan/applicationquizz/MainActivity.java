@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.gaetan.applicationquizz.SQLite.DataBaseManager;
 import com.example.gaetan.applicationquizz.models.Question;
+import com.example.gaetan.applicationquizz.models.Score;
 
 import java.util.List;
 
@@ -42,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
         dbm = new DataBaseManager(this);
         dbm.purgeTableQuestion();
         dbm.insertDatasets();
-        dbm.insertScore(20);
+        List<Score> scores = dbm.selectAllScore();
+        for( Score score  : scores ){
+            Log.i("score", " "+ score.getScore());
+        }
         Log.i("score",Integer.toString(dbm.selectAllScore().get(0).getScore()));
     }
 }

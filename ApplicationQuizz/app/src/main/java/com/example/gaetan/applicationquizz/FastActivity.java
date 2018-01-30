@@ -24,6 +24,8 @@ public class FastActivity extends AppCompatActivity {
     private Button reponse2;
     private Button reponse3;
     private Button reponse4;
+    private TextView AffichScore;
+    private int score = 0;
 
 
     @Override
@@ -37,6 +39,7 @@ public class FastActivity extends AppCompatActivity {
         reponse2 = (Button)findViewById(R.id.response2);
         reponse3 = (Button)findViewById(R.id.response3);
         reponse4 = (Button)findViewById(R.id.response4);
+        AffichScore = (TextView)findViewById(R.id.testscore);
         this.Datasets();
 
 
@@ -45,14 +48,17 @@ public class FastActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String ReponseChoisie = reponse1.getText().toString();
                 if(ReponseChoisie.equals(GoodResponse)){
+                    score++;
                     self.Datasets();
                     Toast.makeText(self,"Bonne Reponse",Toast.LENGTH_SHORT).show();
+
 
                 }
                 else{
                     finish();
                     //Toast.makeText("Perdu :Mauvaise Reponse");
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
+                    dbm.insertScore(self.score);
 
                     //Arreter Activitter
                 }
@@ -65,14 +71,17 @@ public class FastActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String ReponseChoisie = reponse2.getText().toString();
                 if(ReponseChoisie.equals(GoodResponse)){
+                    score++;
                     self.Datasets();
                     Toast.makeText(self,"Bonne Reponse",Toast.LENGTH_SHORT).show();
+
                     //Toast.makeText("Bonne Reponse");
 
                 }
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
+                    dbm.insertScore(self.score);
                     //Toast.makeText("Perdu :Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -85,14 +94,17 @@ public class FastActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String ReponseChoisie = reponse3.getText().toString();
                 if(ReponseChoisie.equals(GoodResponse)){
+                    score++;
                     self.Datasets();
                     Toast.makeText(self,"Bonne Reponse",Toast.LENGTH_SHORT).show();
+
                     //Toast.makeText("Bonne Reponse");
 
                 }
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
+                    dbm.insertScore(self.score);
                     //Toast.makeText("Perdu :Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -105,6 +117,7 @@ public class FastActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String ReponseChoisie = reponse4.getText().toString();
                 if(ReponseChoisie.equals(GoodResponse)){
+                    score++;
                     self.Datasets();
                     //Toast.makeText("Bonne Reponse");
                     Log.i("response", "bonne reponse");
@@ -113,6 +126,7 @@ public class FastActivity extends AppCompatActivity {
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
+                    dbm.insertScore(self.score);
                     //Log.i("response", "Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -132,13 +146,15 @@ public class FastActivity extends AppCompatActivity {
             this.reponse3.setText(questions.get(this.page).getResponseThree());
             this.reponse4.setText(questions.get(this.page).getResponseFour());
             this.GoodResponse = questions.get(this.page).getGoodResponse();
+            this.AffichScore.setText(Integer.toString(this.score));
 
             questions.get(this.page).getGoodResponse();
-            Log.i("lol", "id" + questions.get(this.page).getId());
-            Log.i("lol", Integer.toString(this.page));
             this.page++;
         }else{
             Toast.makeText(self,"Bravo tu as fini le jeux, C'etait dur ? :kappa: ",Toast.LENGTH_SHORT).show();
+            score++;
+            dbm.insertScore(self.score);
+
             finish();
         }
         dbm.close();

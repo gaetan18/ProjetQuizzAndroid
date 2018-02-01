@@ -5,4 +5,7 @@
     <string name="menu2">ThemmeQuizz</string>
     <string name="menu3">Score</string>next
     <string name="next">Suivant</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

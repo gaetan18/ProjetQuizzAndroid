@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         dbm = new DataBaseManager(this);
         dbm.purgeTableQuestion();
         dbm.insertDatasets();
-        List<Score> scores = dbm.selectAllScore();
+        /*List<Score> scores = dbm.selectAllScore();
         for( Score score  : scores ){
             Log.i("score", " "+ score.getScore());
         }
-        Log.i("score",Integer.toString(dbm.selectAllScore().get(0).getScore()));
+        Log.i("score",Integer.toString(dbm.selectAllScore().get(0).getScore()));*/
     }
 }

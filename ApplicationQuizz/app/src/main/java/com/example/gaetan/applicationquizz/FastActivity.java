@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.gaetan.applicationquizz.SQLite.DataBaseManager;
 import com.example.gaetan.applicationquizz.models.Question;
 
+import java.util.Date;
 import java.util.List;
 
 public class FastActivity extends AppCompatActivity {
@@ -58,7 +59,8 @@ public class FastActivity extends AppCompatActivity {
                     finish();
                     //Toast.makeText("Perdu :Mauvaise Reponse");
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
-                    dbm.insertScore(self.score);
+                    Long date = new Date().getTime();
+                    dbm.insertScore(self.score, date);
 
                     //Arreter Activitter
                 }
@@ -81,7 +83,8 @@ public class FastActivity extends AppCompatActivity {
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
-                    dbm.insertScore(self.score);
+                    Long date = new Date().getTime();
+                    dbm.insertScore(self.score, date);
                     //Toast.makeText("Perdu :Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -104,7 +107,8 @@ public class FastActivity extends AppCompatActivity {
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
-                    dbm.insertScore(self.score);
+                    Long date = new Date().getTime();
+                    dbm.insertScore(self.score, date);
                     //Toast.makeText("Perdu :Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -126,7 +130,8 @@ public class FastActivity extends AppCompatActivity {
                 else{
                     finish();
                     Toast.makeText(self,"Mauvaise Reponse",Toast.LENGTH_SHORT).show();
-                    dbm.insertScore(self.score);
+                    Long date = new Date().getTime();
+                    dbm.insertScore(self.score,date);
                     //Log.i("response", "Mauvaise Reponse");
 
                     //Arreter Activitter
@@ -152,8 +157,8 @@ public class FastActivity extends AppCompatActivity {
             this.page++;
         }else{
             Toast.makeText(self,"Bravo tu as fini le jeux, C'etait dur ? :kappa: ",Toast.LENGTH_SHORT).show();
-            score++;
-            dbm.insertScore(self.score);
+            Long date = new Date().getTime();
+            dbm.insertScore(self.score, date);
 
             finish();
         }

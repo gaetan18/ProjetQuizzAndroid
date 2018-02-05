@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.gaetan.applicationquizz.SQLite.DataBaseManager;
 import com.example.gaetan.applicationquizz.models.Question;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private DataBaseManager dbm;
+    public int scoreMax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +50,11 @@ public class MainActivity extends AppCompatActivity {
             Log.i("score", " "+ score.getScore());
         }
         Log.i("score",Integer.toString(dbm.selectAllScore().get(0).getScore()));*/
+
+        //scoreMax = dbm.getScoreMax().getScore();
+        scoreMax = 10;
+
     }
+
+
 }

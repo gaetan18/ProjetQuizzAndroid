@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.gaetan.applicationquizz.SQLite.DataBaseManager;
 import com.example.gaetan.applicationquizz.models.Score;
@@ -43,7 +44,6 @@ public class TableauScore extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
 
     public TableauScore() {
@@ -76,6 +76,8 @@ public class TableauScore extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
     }
+
+
     }
 
     @Override

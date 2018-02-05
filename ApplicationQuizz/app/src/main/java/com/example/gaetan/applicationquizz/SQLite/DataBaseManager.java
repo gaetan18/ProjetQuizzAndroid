@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DataBaseManager extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Quiz.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 1;
     private static final String TABLE = "question";
     private static final String TABLE_S = "score";
 
@@ -90,6 +90,15 @@ public class DataBaseManager extends SQLiteOpenHelper {
         }
         return scores;
     }
+
+   public Score getScoreMax(){
+        String queryS = "Select max(score) from " + TABLE_S;
+        Cursor cursor = this.getReadableDatabase().rawQuery(queryS, null);
+        Score score = new Score(cursor.getInt(0),cursor.getInt(1), cursor.getLong(2));
+        Log.i("DATABASE", "Select max");
+        return score;
+    }
+
     public void insertDatasets(){
         //this.onReset(db);
         this.insertData("Quel acronyme de dragon ball n’existe pas ","db","dbz","dba","dbz","test","dba");

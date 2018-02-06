@@ -20,7 +20,7 @@ public class ScoreWidget extends AppWidgetProvider {
         int scoreMax = dbm.getScoreMax();
         //scoreMax = dbm.getScoreMax().getScore();
 
-        CharSequence widgetText = "QUI Quizz \nVenez battre le reccord ! \nMeilleur Score : "+scoreMax+" bonnes réponses à la suite !";
+        CharSequence widgetText = "CRASH QUIZZ \nVenez battre le reccord ! \nMeilleur Score : "+scoreMax+" bonnes réponses à la suite !";
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.score_widget);
         views.setTextViewText(R.id.appwidget_text, widgetText);

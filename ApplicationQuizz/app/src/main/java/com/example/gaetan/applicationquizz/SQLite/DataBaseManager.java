@@ -102,10 +102,10 @@ public class DataBaseManager extends SQLiteOpenHelper {
 
     public void insertDatasets(){
         //this.onReset(db);
-        this.insertData("Quel acronyme de dragon ball n’existe pas ","db","dbz","dba","dbz","test","dba");
-        this.insertData("Quel est la capital de la france","isle-Adam","Paris","persan","cergy","test2","Paris");
-        this.insertData("Quel est la Cryptomonnaie la plus populaire","bitcoin","etherum","Zcash","Litecoin","test3","bitcoin");
-        this.insertData("Quel est le meilleur jeux de tous les temps","CS:GO","CS:1.6","CS:CZ","CS","test4","CS:GO");
+        this.insertData("Quel acronyme de dragon ball n’existe pas ?","db","dbz","dba","dbz","test","dba");
+        this.insertData("Quel est la capital de la france ?","isle-Adam","Paris","persan","cergy","test2","Paris");
+        this.insertData("Quel est la Cryptomonnaie la plus populaire ?","bitcoin","etherum","Zcash","Litecoin","test3","bitcoin");
+        this.insertData("Quel est le meilleur jeux de tous les temps ?","CS:GO","CS:1.6","CS:CZ","CS","test4","CS:GO");
     }
 
 

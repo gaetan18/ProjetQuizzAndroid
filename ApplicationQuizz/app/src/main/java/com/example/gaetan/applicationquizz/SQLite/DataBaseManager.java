@@ -102,10 +102,16 @@ public class DataBaseManager extends SQLiteOpenHelper {
 
     public void insertDatasets(){
         //this.onReset(db);
-        this.insertData("Quel acronyme de dragon ball n’existe pas ?","db","dbz","dba","dbz","test","dba");
-        this.insertData("Quel est la capital de la france ?","isle-Adam","Paris","persan","cergy","test2","Paris");
-        this.insertData("Quel est la Cryptomonnaie la plus populaire ?","bitcoin","etherum","Zcash","Litecoin","test3","bitcoin");
-        this.insertData("Quel est le meilleur jeux de tous les temps ?","CS:GO","CS:1.6","CS:CZ","CS","test4","CS:GO");
+        this.insertData("Quel film  n’a pas recu d’oscar ?","Dragon Ball Evolution","La La Land","le silence des agneaux","Rocky","cinema","Dragon Ball Evolution");
+        this.insertData("Quel est le 1er disney a etre sortie au cinema ?","mulan","la reine des neige","Bambi","blanche-neige et les 7 nains","cinema","blanche-neige et les 7 nains");
+        this.insertData("Quel est le premier star wars a etre sortie au cinema ?","le reveil de la force","un nouvel espoir","la menace fantome"," l’empire contre-attaque","cinema","un nouvel espoir");
+        this.insertData("Quel est le 1er film pixar ?","Toy Story","Cars","Monstre & cie","nemo","cinema","Toy Story");
+        this.insertData("Quel est le plus gros succes de tout les temps ?","Avatar","Matrix","Avengers","Star trek","cinema","Avatar");
+        this.insertData("De quel Jeux est adapter le jeu Warcraft ?","Warcraft 1","Warcraft 2","Warcraft 3","Warcraft 4","cinema","Warcraft 1");
+        this.insertData("Dans quel film de Darren Aronofsky, Nathalie Portman a t-elle jouer ?","Star Wars","Leon","Black Swan","V pour Vendetta","cinema","Black Swan");
+        this.insertData("Quel Franchise d’action a fait connaitre Vin Diesel","Fast and Furious","Pitch Black","XXX","50 Nuances de Grey","cinema","Fast and Furious");
+        this.insertData("Quel héros Marvel Sam Remi a t-il mis en scène","Kingsman","Wolwerine","Spider-man","Iron-man","cinema","Spider-man");
+        this.insertData("Parmi ces film, lequelle est un Miyasaki","Your name","Freres des ours","Hercule","Princesse Mononoke","cinema","Princesse Mononoke");
     }
 
 

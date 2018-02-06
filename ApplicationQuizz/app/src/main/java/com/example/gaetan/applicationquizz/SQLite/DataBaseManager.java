@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DataBaseManager extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Quiz.db";
-    private static final int DATABASE_VERSION = 20;
+    private static final int DATABASE_VERSION = 22;
     private static final String TABLE = "question";
     private static final String TABLE_S = "score";
 
@@ -110,8 +110,13 @@ public class DataBaseManager extends SQLiteOpenHelper {
         this.insertData("De quel Jeux est adapter le jeu Warcraft ?","Warcraft 1","Warcraft 2","Warcraft 3","Warcraft 4","cinema","Warcraft 1");
         this.insertData("Dans quel film de Darren Aronofsky, Nathalie Portman a t-elle jouer ?","Star Wars","Leon","Black Swan","V pour Vendetta","cinema","Black Swan");
         this.insertData("Quel Franchise d’action a fait connaitre Vin Diesel","Fast and Furious","Pitch Black","XXX","50 Nuances de Grey","cinema","Fast and Furious");
-        this.insertData("Quel héros Marvel Sam Remi a t-il mis en scène","Kingsman","Wolwerine","Spider-man","Iron-man","cinema","Spider-man");
-        this.insertData("Parmi ces film, lequelle est un Miyasaki","Your name","Freres des ours","Hercule","Princesse Mononoke","cinema","Princesse Mononoke");
+        this.insertData("Quel héros Marvel Sam Remi a t-il mis en scène ?","Kingsman","Wolwerine","Spider-man","Iron-man","cinema","Spider-man");
+        this.insertData("Parmi ces film, lequelle est un Miyasaki ?","Your name","Freres des ours","Hercule","Princesse Mononoke","cinema","Princesse Mononoke");
+        this.insertData("Quelle Star interprete le heros du film mission impossible ?","Leonardo Dicaprio","Tom Cruise","Hugh Jackman","Charlize Theron","cinema","Tom Cruise");
+        this.insertData("Quelle Acteur a recu un oscar avec seulement 20 minutes de presence dans le film ?","Antonio banderas(Zorro)","Zac Effron(High School Musical))","Dwayne Johnson(San andreas)","Anthony Hopkins(Le Silence des agneaux","cinema","Anthony Hopkins(Le Silence des agneaux");
+        this.insertData("Pour quel film celine dion a t-elle fait la bande originale ?","Mad Max","Speed Racer","Hercule","Titanic","cinema","Titanic");
+        this.insertData("Quelle Film a rendu celebre Mel Gibson ?","Star trek","The reader","Mad Max","Grand Budapest Hotel","cinema","Mad Max");
+        this.insertData("Quelle trilogie a t-elle recu au moins un oscar pour chaque film ? ?","Le seigneur des anneaux","The Dark Knight","Mad Max","Star Wars","cinema","Le seigneur des anneaux");
     }
 
 

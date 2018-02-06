@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         Log.i("score",Integer.toString(dbm.selectAllScore().get(0).getScore()));*/
 
         //scoreMax = dbm.getScoreMax().getScore();
-        scoreMax = 10;
 
     }
 

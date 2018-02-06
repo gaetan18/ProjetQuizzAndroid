@@ -6,6 +6,8 @@ import android.content.Context;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 
+import com.example.gaetan.applicationquizz.SQLite.DataBaseManager;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -13,10 +15,12 @@ public class ScoreWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
+        DataBaseManager dbm = new DataBaseManager(context);
 
+        int scoreMax = dbm.getScoreMax();
         //scoreMax = dbm.getScoreMax().getScore();
-        int scoreMax = 10;
-        CharSequence widgetText = context.getString(scoreMax);
+
+        CharSequence widgetText = "QUI Quizz \nVenez battre le reccord ! \nMeilleur Score : "+scoreMax+" bonnes réponses à la suite !";
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.score_widget);
         views.setTextViewText(R.id.appwidget_text, widgetText);

@@ -42,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button menuLocation = findViewById(R.id.location);
+        menuLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this, Location.class);
+                startActivity(intent);
+            }
+        });
+
         dbm = new DataBaseManager(this);
         dbm.purgeTableQuestion();
         dbm.insertDatasets();
